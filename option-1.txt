@@ -1,0 +1,10 @@
+React is a front-end view framework. Views consist of multiple components, which are like functions which output html when they are called and given inputs. 
+
+The inputs are called props, which one should consider an abbreviation of the word properties. React components are setup so there’s one top component which cause lower components to get rendered to the DOM/screen by calling them and passing a props object.
+
+React is setup like an up-side-down tree with one top components
+
+
+A component accepts a single "props" object argument with data and returns a React element.
+
+props are read-only objects 
