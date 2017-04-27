@@ -8,3 +8,7 @@ React is setup like an up-side-down tree with one top components
 A component accepts a single "props" object argument with data and returns a React element.
 
 props are read-only objects 
+
+
+
+Each component is like a function which will render html to the DOM/screen when called and passed props. Props is an object containing key:value pairs which the component can not change. When using JSX, the props.key can be wrapped in braces and included inline with html. When the component is called and passed a props object, each key will be replaced by its value in the rendered html. Since props are passed by the parent, the component being rendered can not alter the keys or values of its own props. Generally speaking, to change the values of its own props, the component in question would have to invoke a function which would attempt to replace the value in the state belonging to the parent from where the component in question was called.
