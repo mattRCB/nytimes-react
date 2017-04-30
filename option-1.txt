@@ -5,7 +5,7 @@ The inputs are called props, which one should consider an abbreviation of the wo
 React is setup like an up-side-down tree with one top component.
 
 
-A component accepts a single "props" object argument with data and returns the page-ready html for a React element.
+A component accepts a single "props" object argument containing data and returns the page-ready html for a React element.
 
 props are read-only objects 
 
@@ -17,3 +17,10 @@ Each component is like a function which will render html to the DOM/screen when 
 
 
 To facilitate tying together changes and values (state) in different view components, React imbues every component with several event listeners, collectively known as the component lifecycle methods. These events and the functions a programmer attaches in them occur at specific moments in the process of components being called, rendered, updated and destroyed. So if the occurrence of some thing in one component should cause changes in other components, then the first component’s lifecycle methods can contain functions to cause changes in the other components, and so on. Thus events and state-changes are propagated “automatically” across components.
+
+
+STATE
+
+State is a property of react’s “component” class. It holds the values of a component’s inherent properties at the present time. It’s scope and permissions are limited to the component to which it belongs, i.e. a component can access its own state-property and not the state of other components. To provide a state property to a component, include this.state = { <something> } inside the component’s “constructor” property. Although “state” is considered an immutable property of an instance of the component class, the values held by state can be changed by using the this.setState({}) method. Using this method to change values in state ensures that React will re-render the component and the component lifecycle events will occur.
+
+It is a common pattern in React that values held in the state of one component are passed as “props” when child components are called/rendered. Thus, data flows down from parent components to child components.
